@@ -28,7 +28,7 @@ class NM(Model):
         p.initialise_age_parameters(graph)
 
         result_bm = process_graph_bm(p, graph, nodes_per_struct)
-        result_sq = load_and_process_graph_sq()
+        result_sq = process_graph_sq(p, graph, nodes_per_struct)
         result_mq = load_and_process_graph_mq([1, 2, 4])
 
         return ModelResult(self.result_id(p), {
